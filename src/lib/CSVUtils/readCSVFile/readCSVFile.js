@@ -11,7 +11,7 @@ function readCSVFile(path) {
             const output = [];
 
             parse(data, {
-                trim: true,
+                columns: true,
                 skip_empty_lines: true
             })
                 // Can't use arrow function because of this
