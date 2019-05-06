@@ -10,8 +10,8 @@ function createCSVFile(object, path) {
     }
 
     return new Promise((resolve, reject) => {
-        const fields = Object.keys(object);
-        const csv = json2csv.parse(object, { fields });
+        const fields = Object.keys(object[0]);
+        const csv = json2csv.parse(object, { fields, header: false });
 
         fs.writeFile(path + ".csv", csv, err => {
             if (err) {
