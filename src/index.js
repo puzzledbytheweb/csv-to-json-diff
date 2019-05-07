@@ -1,7 +1,7 @@
 const jsonDiffPatch = require("jsondiffpatch").create();
 const fs = require("fs");
 
-module.exports = async function csvToJsonDiff(
+module.exports = function csvToJsonDiff(
     file1,
     file2,
     options = {
