@@ -1,17 +1,7 @@
-const { CSVUtils } = require("./lib");
-const jsonDiffPatch = require("jsondiffpatch").create({
-    arrays: {
-        includeValueOnMove: true
-    }
-});
-
-const diffPluginSaveId = require("./utils/diffPlugins/diffPluginSaveId");
-
+const jsonDiffPatch = require("jsondiffpatch").create();
 const fs = require("fs");
 
-const { readCSVFile } = CSVUtils;
-
-async function runReadLogic(
+module.exports = async function csvToJsonDiff(
     file1,
     file2,
     options = {
@@ -39,21 +29,4 @@ async function runReadLogic(
             if (err) console.error(err);
         }
     );
-}
-
-function sortingFunction(element1, element2) {
-    return element1["EAN"] - element2["EAN"];
-}
-
-async function start() {
-    const file1 = await readCSVFile("MOCK_DATA.csv");
-    const file2 = await readCSVFile("MOCK_DATA1.csv");
-
-    runReadLogic(file1, file2, {
-        sort: sortingFunction,
-        plugins: [{ plugin: diffPluginSaveId, before: "collectChildren" }],
-        outputFilePath: "test.json"
-    });
-}
-
-start();
+};
