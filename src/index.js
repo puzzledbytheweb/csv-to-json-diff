@@ -14,21 +14,26 @@ const { readCSVFile } = CSVUtils;
 async function runReadLogic(
     file1,
     file2,
-    options = { sort: undefined, plugins: [{ plugin: null, before: null }] }
+    options = {
+        sort: undefined,
+        plugins: [{ plugin: null, before: null }],
+        outputFilePath: null
+    }
 ) {
-    const { sort, plugins } = options;
-    // Sort the files based in EAN
+    // Sort the files based in user provided function
     file1.sort(options.sort);
     file2.sort(options.sort);
 
     // Prepare every plugin
-    jsonDiffPatch.processor.pipes.diff.before(
-        "collectChildren",
-        diffPluginSaveId
-    );
+    options.plugins.forEach(pluginEntry => {
+        jsonDiffPatch.processor.pipes.diff.before(
+            pluginEntry.before,
+            pluginEntry.plugin
+        );
+    });
 
     fs.writeFile(
-        "test.json",
+        options.outputFilePath,
         JSON.stringify(jsonDiffPatch.diff(file1, file2)),
         err => {
             if (err) console.error(err);
@@ -46,7 +51,8 @@ async function start() {
 
     runReadLogic(file1, file2, {
         sort: sortingFunction,
-        plugins: [{ plugin: diffPluginSaveId, before: "collectChildren" }]
+        plugins: [{ plugin: diffPluginSaveId, before: "collectChildren" }],
+        outputFilePath: "test.json"
     });
 }
 
