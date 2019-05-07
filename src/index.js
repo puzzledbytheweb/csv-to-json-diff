@@ -7,7 +7,7 @@ const jsonDiffPatch = require("jsondiffpatch").create({
 
 const fs = require("fs");
 
-const { readCSVFile, createCSVFile } = CSVUtils;
+const { readCSVFile } = CSVUtils;
 
 function sortingFunction(element1, element2) {
     return element1["EAN"] - element2["EAN"];

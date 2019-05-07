@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "csv-parse": "^4.4.1",
+    "diff": "^4.0.1",
     "json2csv": "^4.5.1",
     "jsondiffpatch": "^0.3.11"
   }
