@@ -22,6 +22,7 @@ module.exports = async function csvToJsonDiff(
         );
     });
 
+    // Write output to specific file
     fs.writeFile(
         options.outputFilePath,
         JSON.stringify(jsonDiffPatch.diff(file1, file2)),
