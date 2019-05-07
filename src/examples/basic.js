@@ -1,6 +1,6 @@
 const csvToJsonDiff = require("../index");
 
-const { readCSVFile } = require("../lib/CSVUtils/index");
+const { readCSVFile } = require("csv-utils");
 
 const { saveIdPlugin } = require("../plugins/");
 
