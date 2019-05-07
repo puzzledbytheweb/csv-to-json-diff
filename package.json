@@ -1,18 +1,16 @@
 {
-  "name": "jsondiffpatch",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "csv-parse": "^4.4.1",
-    "diff": "^4.0.1",
-    "json2csv": "^4.5.1",
-    "jsondiffpatch": "^0.3.11",
-    "lodash": "^4.17.11"
-  }
+    "name": "jsondiffpatch",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "diff": "^4.0.1",
+        "jsondiffpatch": "^0.3.11",
+        "lodash": "^4.17.11"
+    }
 }
