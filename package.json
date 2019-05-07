@@ -1,13 +1,14 @@
 {
-    "name": "jsondiffpatch",
+    "name": "csv-to-json-diff",
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
-    "author": "",
+    "author": "Pedro Filipe <noEmailYet@gmail.com> (https://github.com/puzzledbytheweb)",
     "license": "ISC",
+    "repository": {},
     "dependencies": {
         "csv-utils": "file:./src/lib/CSVUtils",
         "jsondiffpatch": "^0.3.11",
