@@ -40,15 +40,16 @@ csv-parse@^4.4.1:
   resolved "https://registry.yarnpkg.com/csv-parse/-/csv-parse-4.4.1.tgz#b40df60a3724fdf24ad2856586bf8f1dc7682e54"
   integrity sha512-uFe5phPfmwBXSPWz5GYHeaEc2Oezn2kY5iLIvG1sJjc32Y4GU7T/b/uX5ffZh4CBDWwJQjwAuxrDEdl3Z5Qv+g==
 
+"csv-utils@file:./src/lib/CSVUtils":
+  version "0.0.1"
+  dependencies:
+    csv-parse "^4.4.1"
+    json2csv "^4.5.1"
+
 diff-match-patch@^1.0.0:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/diff-match-patch/-/diff-match-patch-1.0.4.tgz#6ac4b55237463761c4daf0dc603eb869124744b1"
   integrity sha512-Uv3SW8bmH9nAtHKaKSanOQmj2DnlH65fUpcrMdfdaOxUG02QQ4YGZ8AE7kKOMisF7UqvOlGKVYWRvezdncW9lg==
-
-diff@^4.0.1:
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/diff/-/diff-4.0.1.tgz#0c667cb467ebbb5cea7f14f135cc2dba7780a8ff"
-  integrity sha512-s2+XdvhPCOF01LRQBC8hf4vhbVmI2CGS5aZnxLJlT5FtdhPCDFq80q++zK2KlrVorVDdL5BOGZ/VfLrVtYNF+Q==
 
 escape-string-regexp@^1.0.5:
   version "1.0.5"
