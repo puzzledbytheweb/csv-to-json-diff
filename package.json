@@ -10,7 +10,7 @@
     "license": "ISC",
     "repository": {},
     "dependencies": {
-        "csv-utils": "file:./src/lib/CSVUtils",
+        "csv-utils": "git://github.com/puzzledbytheweb/csv-to-json-diff.git",
         "jsondiffpatch": "^0.3.11",
         "lodash": "^4.17.11"
     }
